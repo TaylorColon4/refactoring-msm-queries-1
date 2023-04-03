@@ -17,7 +17,7 @@ class DirectorsController < ApplicationController
 
   def max_dob
     directors_by_dob_desc = Director.
-      all.
+    all.
       where.not({ :dob => nil }).
       order({ :dob => :desc })
 
